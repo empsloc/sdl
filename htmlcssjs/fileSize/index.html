@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Size Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            max-width: 400px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        input[type="file"] {
+            margin-bottom: 20px;
+        }
+
+        #fileSizeResult {
+            font-size: 16px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <input type="file" id="fileInput" onchange="calculateFileSize()">
+        <p id="fileSizeResult"></p>
+    </div>
+
+    <script>
+        function calculateFileSize() {
+            const fileInput = document.getElementById('fileInput');
+            const fileSizeResult = document.getElementById('fileSizeResult');
+            
+            if (fileInput.files.length > 0) {
+                const file = fileInput.files[0];
+                const fileSizeInBytes = file.size;
+                const fileSizeInKb = fileSizeInBytes / 1024;
+                const fileSizeInMb = fileSizeInKb / 1024;
+
+                fileSizeResult.innerHTML = `File Size: 
+                    ${fileSizeInBytes} bytes 
+                    (${fileSizeInKb.toFixed(2)} KB) 
+                    (${fileSizeInMb.toFixed(2)} MB)`;
+            } else {
+                fileSizeResult.innerHTML = "Please select a file.";
+            }
+        }
+    </script>
+</body>
+</html>
