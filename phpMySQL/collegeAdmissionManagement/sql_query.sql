@@ -1,0 +1,17 @@
+CREATE DATABASE college;
+
+CREATE TABLE admission (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(50) NOT NULL,
+    email VARCHAR(50) NOT NULL,
+    phone VARCHAR(15) NOT NULL,
+    course VARCHAR(50) NOT NULL
+);
+
+CREATE TABLE enrolled (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(50) NOT NULL,
+    email VARCHAR(50) NOT NULL,
+    phone VARCHAR(15) NOT NULL,
+    course VARCHAR(50) NOT NULL
+);

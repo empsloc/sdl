@@ -1,0 +1,59 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+  }
+  
+  h2 {
+    text-align: center;
+  }
+  
+  .data-table {
+    margin: 0 auto;
+    border-collapse: collapse;
+  }
+  
+  .data-table td {
+    padding: 10px;
+    border: 1px solid #ccc;
+  }
+  
+  .data-table label {
+    font-weight: bold;
+  }
+  
+  .center {
+    text-align: center;
+  }
+  
+  button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+  
+  .activity-log {
+    margin-top: 30px;
+  }
+  
+  .activity-log h3 {
+    text-align: center;
+  }
+  
+  #logList {
+    list-style: none;
+    padding: 0;
+  }
+  
+  #logList li {
+    margin-bottom: 5px;
+  }
+  

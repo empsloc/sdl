@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registration Form</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Registration Form</h2>
+    <form id="registrationForm" onsubmit="return validateForm()">
+      <div class="form-group">
+        <label for="firstName">First Name:</label>
+        <input type="text" id="firstName" name="firstName" placeholder="Enter your first name" required>
+        <span id="firstNameError" class="error"></span>
+      </div>
+      <div class="form-group">
+        <label for="lastName">Last Name:</label>
+        <input type="text" id="lastName" name="lastName" placeholder="Enter your last name" required>
+        <span id="lastNameError" class="error"></span>
+      </div>
+      <div class="form-group">
+        <label for="organization">Organization:</label>
+        <input type="text" id="organization" name="organization" placeholder="Enter your organization">
+      </div>
+      <div class="form-group">
+        <label for="hobbies">Hobbies:</label>
+        <textarea id="hobbies" name="hobbies" placeholder="Enter your hobbies"></textarea>
+        <span id="hobbiesError" class="error"></span>
+      </div>
+      <button type="submit">Register</button>
+    </form>
+    <div id="registrationDetails" class="hidden">
+      <h2>Registration Details</h2>
+      <p>First Name: <span id="firstNameDisplay"></span></p>
+      <p>Last Name: <span id="lastNameDisplay"></span></p>
+      <p>Organization: <span id="organizationDisplay"></span></p>
+      <p>Hobbies: <span id="hobbiesDisplay"></span></p>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Restaurant Data Entry Form</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h2>Restaurant Data Entry Form</h2>
+  <table class="data-table">
+    <tr>
+      <td><label for="name">Name:</label></td>
+      <td><input type="text" id="name" name="name"></td>
+    </tr>
+    <tr>
+      <td><label for="location">Location:</label></td>
+      <td><input type="text" id="location" name="location"></td>
+    </tr>
+    <tr>
+      <td><label for="cuisine">Cuisine:</label></td>
+      <td><input type="text" id="cuisine" name="cuisine"></td>
+    </tr>
+    <tr>
+      <td><label for="rating">Rating:</label></td>
+      <td><input type="number" id="rating" name="rating" min="1" max="5"></td>
+    </tr>
+    <tr>
+      <td colspan="2" class="center">
+        <button id="submitBtn">Submit</button>
+      </td>
+    </tr>
+  </table>
+
+  <div id="activityLog" class="activity-log">
+    <h3>Activity Log</h3>
+    <ul id="logList"></ul>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
